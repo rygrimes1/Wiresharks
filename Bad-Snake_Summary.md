@@ -45,6 +45,8 @@ The "Bad Snakes" paper itself does not propose a specific technical mitigation t
 
 ## 2. Common Issues Encountered During Reproduction
 
+# Bad Snakes Project: Reproducibility Scorecard
+
 | Issue                                     | What Happened                                                                                                        | Why It Happened                                                                                                                                                                                                            | Concern                                                                                                                          | Fix (or Attempted Fix)                                                                                                                                       |
 | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Python Version Incompatibility            | The project required Python 3.8/3.9, but our system had Python 3.13.                                                 | Project dependencies (like older TensorFlow versions in related contexts) are often tied to specific Python versions, and newer versions introduce breaking changes.                                                      | The project couldn't run correctly or install dependencies without the specific Python version.                                  | Attempted to manage Python versions using `pyenv` and explicit version installations.                                                                          |
@@ -56,6 +58,20 @@ The "Bad Snakes" paper itself does not propose a specific technical mitigation t
 
 
 ## 3. Reproducibility Assessment
+
+# Bad Snakes Project: Reproducibility Scorecard
+
+| Metric | Rating | Explanation (Simple) |
+| :------------------------------ | :----: | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Paper Availability** | **5** | The research paper was free, open-access, and easily available for download. |
+| **Availability of Code and Software** | **5** | All necessary code was free, open-source, provided in the GitHub repository, and was successfully cloned. |
+| **Availability of Datasets** | **1** | The crucial original datasets were explicitly not provided and were inaccessible due to licensing/privacy. |
+| **Computer Requirements** | **2** | Required specific Python versions (3.8/3.9) that conflicted with newer systems, and faced unresolvable hardware issues for Docker. |
+| **GPU Requirements** | **1** | The documentation provided no information about GPU requirements, making it unclear if one was needed. |
+| **Documentation Quality** | **2** | Instructions were outdated for modern Python and system environments, leading to extensive troubleshooting beyond the guide. |
+| **Ease of Setup** | **2** | Setting up was very difficult due to Python conflicts, missing dependencies, and an unfixable hardware barrier (Docker virtualization). |
+| **Reproducibility of Results** | **1** | We couldn't get the project to run at all due to setup issues and missing data, so we could not verify any results. |
+| **Overall Rating** | **2** | Can't run without major problems; needs expert help or significant workarounds. |
 
 | Question                                    | Answer                                                                                                                                                                                                                               |
 | :------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
