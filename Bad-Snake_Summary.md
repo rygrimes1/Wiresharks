@@ -1,15 +1,15 @@
-ADMI25 Hackathon: Bad Snakes Project Summary
+# ADMI25 Hackathon: Bad Snakes Project Summary
 
-1. Key Findings & Methodology
+## 1. Key Findings & Methodology
 
-Project Overview
+### Project Overview
 
 * The "Bad Snakes" project investigates malicious packages on PyPI, a significant threat to software supply chains.
 * The research evaluates existing tools designed to detect malware within PyPI packages.
 * It aims to provide insights to enhance PyPI's overall malware detection capabilities and security.
 * The study analyzes the effectiveness of various detection tools against different sets of packages (malicious, popular, random).
 
-Technical Tools Used
+### Technical Tools Used
 
 * Bandit: A widely used security linter for Python code.
 * OSSGadget OSS Detect Backdoor: A tool specifically for backdoor detection.
@@ -17,13 +17,13 @@ Technical Tools Used
 * Python Poetry: Utilized for dependency management and creating isolated Python environments.
 * Jupyter Notebooks: Used by the original authors to outline and execute analysis steps.
 
-Example Cases (Our Reproduction Experience)
+### Example Cases (Our Reproduction Experience)
 
 * **Environment Setup Success:** We successfully configured a Python environment using Poetry, managing dependencies and resolving minor Python version issues.
 * **Tool Functionality Demonstration:** We were able to execute `bandit` on a small, locally created dummy Python file, confirming the basic functionality and setup of the scanning tools.
 * **Dataset Unavailability (Critical Issue):** The core limitation was the explicit absence of the original malicious, popular, and random PyPI package datasets. This prevented any quantitative reproduction of the paper's reported accuracy metrics and findings.
 
-Methodology
+### Methodology
 
 The methodology of the "Bad Snakes" paper broadly involves:
 * **Dataset Curation:** Compiling lists of malicious, popular, and random Python package names and versions from PyPI.
@@ -31,19 +31,19 @@ The methodology of the "Bad Snakes" paper broadly involves:
 * **Tool Execution:** Running various static analysis and malware detection tools (e.g., Bandit, OSSGadget) against the acquired package files.
 * **Result Analysis:** Evaluating the performance and effectiveness of these tools based on their ability to identify malicious code and their reported detection rates.
 
-Data & Accuracy
+### Data & Accuracy
 
 * **Datasets:** The project utilizes three types of PyPI package datasets: malicious, popular, and random.
 * **Data Accessibility:** The **raw package data is not available** for public download due to licensing and PII concerns, severely limiting full reproduction.
 * **Accuracy Metrics:** The paper reports standard accuracy metrics (True Positives, False Positives, False Negatives, False Negative Rate, False Positive Rate) for various tools.
 * **Our Reproduction:** Due to the missing datasets, we **could not reproduce or verify** these quantitative accuracy metrics.
 
-Mitigation Proposal
+### Mitigation Proposal
 
 The "Bad Snakes" paper itself does not propose a specific technical mitigation tool, but rather evaluates existing detection methods. The **implied mitigation proposal** stemming from its findings is:
 * To leverage the insights gained from the evaluation to improve the automated malware detection mechanisms within the PyPI ecosystem, enhancing its overall security posture against supply chain attacks.
 
-2. Common Issues Encountered During Reproduction
+## 2. Common Issues Encountered During Reproduction
 
 | Issue                                     | What Happened                                                                                                        | Why It Happened                                                                                                                                                                                                            | Concern                                                                                                                          | Fix (or Attempted Fix)                                                                                                                                       |
 | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,7 +55,7 @@ The "Bad Snakes" paper itself does not propose a specific technical mitigation t
 | Missing Datasets                          | The original raw PyPI package datasets were not available for download.                                              | Authors cited licensing restrictions and PII (Personally Identifiable Information) concerns as reasons for not distributing the raw data.                                                                                | Prevented quantitative reproduction and verification of the paper's key findings (e.g., accuracy metrics).                   | **Unresolved for full reproduction:** Could only demonstrate tool functionality on dummy data, not reproduce original results.                                   |
 
 
-3. Reproducibility Assessment
+## 3. Reproducibility Assessment
 
 | Question                                    | Answer                                                                                                                                                                                                                               |
 | :------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,9 +65,9 @@ The "Bad Snakes" paper itself does not propose a specific technical mitigation t
 | Any issues with dependencies or hardware?     | Yes, significant dependency conflicts (e.g., `scikit-image`, `setuptools`) and unresolvable hardware/system barriers (inability to enable virtualization for Docker) were encountered.                                                    |
 | How close were your results to theirs?        | We were **unable to compare** our results to theirs. Due to critical setup issues, dependency conflicts, and the unavailability of the datasets, the project could not be run to produce any comparative output files.                  |
 
-**Reproducibility Rating:** 2 out of 5 (Very Difficult)
+## **Reproducibility Rating:** 2 out of 5 (Very Difficult)
 
-**Reasoning:**
+### **Reasoning:**
 The "Bad Snakes" project received a reproducibility rating of **2 out of 5 (Very Difficult)**. This classification indicates that the artifact "can't run without major problems" and "needs expert help or significant workarounds" to attempt reproduction. While the core code was available, the following factors contributed to this low rating:
 
 * **Significant Environment Setup Issues:** Persistent challenges were faced with Python version compatibility (e.g., Python 3.13 vs. required 3.8/3.9) and resolving dependency conflicts (`scikit-image`, `setuptools`).
