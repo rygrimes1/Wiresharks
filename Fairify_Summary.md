@@ -108,6 +108,18 @@ Fairify offers several practical advantages for addressing and preventing AI bia
 | **Reproducibility of Results** | **1** | Even after the script ran for hours, no result files were generated. We could not get the project to produce verifiable output, making true reproduction impossible. |
 | **Overall Rating** | **3** | Can be run with some effort; requires troubleshooting or minor fixes. |
 
+## Fairify Project Rating: 3/5 (Doable)
+
+The Fairify project received an overall reproducibility rating of **3 out of 5 (Doable)**.
+
+**Reasoning:**
+
+* **Code and Data Accessible:** A major positive was that the paper, all necessary code, and the datasets were readily available, which allowed us to start the reproduction process.
+* **Python Version Challenges:** We faced significant issues due to a required older Python version (Python 3.9 for TensorFlow 2.5.0) which conflicted with our system's newer Python 3.13. This demanded extra effort using `pyenv`.
+* **Complex Setup:** Getting the environment ready was challenging, including manual `pyenv` setup, installing specific libraries, and dealing with virtual environment issues.
+* **No Output Files:** The most critical problem was that even after the script ran for hours, **it never generated any output CSV files**. This prevented us from being able to compare our results to the paper's claims, making full reproduction impossible.
+* **Outdated Instructions:** The project's instructions were not complete for modern setups, lacking clear guidance for Python version management and where to create output folders.
+
 ---
 
 *This summary references information from the paper `Fairify: Fairness Verification of Neural Networks`. by Sumon Biswas and Hridesh Rajan*
