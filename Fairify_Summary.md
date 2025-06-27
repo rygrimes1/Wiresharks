@@ -94,6 +94,20 @@ Fairify offers several practical advantages for addressing and preventing AI bia
 
 * **Confident AI Deployment:** Developers can confidently deploy "trimmed" (pruned) and formally verified AI models, assured that they have undergone rigorous fairness checks.
 
+## Fairify Scorecard
+
+| Metric | Rating | Explanation |
+| :------------------------------- | :----: | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Paper Availability** | **4** | The research paper (`Fairify`) was easily found and accessed, and its GitHub repo was clearly referenced. |
+| **Availability of Code and Software** | **4** | The project's code was publicly available on GitHub, and we could clone it. All necessary parts were there. |
+| **Availability of Datasets** | **5** | All AI models and testing data, including German Credit (GC), were provided within the GitHub package and were accessible. |
+| **Computer Requirements** | **3** | It required a specific older Python version (3.9) not standard on our modern Kali system, needing special `pyenv` setup. |
+| **GPU Requirements** | **5** | No GPU was strictly needed; the tool successfully ran using only the CPU, even with TensorFlow warnings. |
+| **Documentation Quality** | **2** | Instructions were insufficient for common setup issues (like Python version fixes, `pyenv` setup, and missing output folders), requiring much external troubleshooting. |
+| **Ease of Setup** | **2** | Setting it up was very difficult due to Python version conflicts, `pyenv` setup issues, and the persistent problem of results not being saved. |
+| **Reproducibility of Results** | **1** | Even after the script ran for hours, no result files were generated. We could not get the project to produce verifiable output, making true reproduction impossible. |
+| **Overall Rating** | **3** | Can be run with some effort; requires troubleshooting or minor fixes. |
+
 ---
 
 *This summary references information from the paper `Fairify: Fairness Verification of Neural Networks`. by Sumon Biswas and Hridesh Rajan*
