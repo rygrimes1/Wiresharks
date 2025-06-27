@@ -81,6 +81,20 @@
 
 ## 3. Reproducibility Assessment
 
+### BFT Detector Scorecard
+
+| Metric | Rating | Explanation (Simple) |
+| :------------------------------- | :----: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Paper Availability** | **3** | The paper was accessible, but the exact method wasn't clear, suggesting it wasn't a direct, easy find. |
+| **Availability of Code and Software** | **3** | Code was on GitHub and cloned, but installation failed repeatedly due to very outdated instructions for modern Python. |
+| **Availability of Datasets** | **2** | Datasets were mentioned but had no clear links or instructions, so we couldn't find or access them. |
+| **Computer Requirements** | **3** | Specific OS and Python versions were required, and a crucial virtualization issue on the host made setting up a compatible environment very hard. |
+| **GPU Requirements** | **1** | No GPU requirements were stated in the documentation, making it unclear if one was needed or not. |
+| **Documentation Quality** | **2** | Instructions were outdated and caused extensive troubleshooting, forcing us to go far beyond the provided guide. |
+| **Ease of Setup** | **2** | Setting it up was extremely challenging due to constant Python conflicts and an unfixable hardware barrier (BIOS virtualization). |
+| **Reproducibility of Results** | **1** | We couldn't get the project to run at all, so we couldn't execute any experiments or verify the paper's claimed results. |
+| **Overall Rating** | **2** | Can't run without major problems; needs expert help or significant workarounds. |
+
 | Question | Answer |
 | ----- | ----- |
 | **Did the repo include all necessary code?** | Yes, the repository code was complete. |
