@@ -81,9 +81,9 @@ Making science reproducible is hard! For projects to be easier to reproduce, the
 ## Technology Used
 
 * **Programming Languages:** Python, JavaScript
-* **Core Libraries/Frameworks:** TensorFlow/Keras, Numpy, Z3, Poetry, Bandit, scikit-image
-* **Automation/Virtualization:** Google Puppeteer, Docker (attempted), `pyenv`
-* **Environment:** Kali Linux (WSL)
+* **Core Libraries/Frameworks:** TensorFlow/Keras, Numpy, Poetry, scikit-image (attempted)
+* **Automation/Virtualization:** Docker (attempted for isolation), and pyenv (for Python version management)
+* **Environment:** Kali Linux (WSL), MacOS, Jupyter 
 
 Thank you for visiting our repository! We hope our work contributes to a better understanding of reproducible research practices.
 ```
