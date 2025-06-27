@@ -83,7 +83,7 @@
 
 ### BFT Detector Scorecard
 
-| Metric | Rating | Explanation (Simple) |
+| Metric | Rating | Explanation |
 | :------------------------------- | :----: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Paper Availability** | **3** | The paper was accessible, but the exact method wasn't clear, suggesting it wasn't a direct, easy find. |
 | **Availability of Code and Software** | **3** | Code was on GitHub and cloned, but installation failed repeatedly due to very outdated instructions for modern Python. |
